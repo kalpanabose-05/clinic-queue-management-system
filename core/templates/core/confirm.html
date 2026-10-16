@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appointment Confirmation - LifeCare Clinic</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:'Poppins', sans-serif;
+
+            /* Hospital Background Image */
+            background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .box{
+            background: rgba(255,255,255,0.95);
+            padding:40px;
+            width:420px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+        }
+
+        h1{
+            color:#009688;
+            margin-bottom:10px;
+        }
+
+        p{
+            font-size:18px;
+            color:#444;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:12px 25px;
+            margin:10px;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            color:white;
+            background:#009688;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#00695c;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Appointment Booked!</h1>
+
+    <p>Your appointment has been successfully submitted.</p>
+    <p>Please wait for your token in the queue.</p>
+
+    <a href="{% url 'home' %}" class="btn">Home</a>
+    <a href="{% url 'queue' %}" class="btn">View Queue</a>
+
+</div>
+
+</body>
+</html>

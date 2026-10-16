@@ -1,0 +1,135 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <title>Insurance Partners - Life Care Clinic</title>
+    <style>
+        body{
+            margin:0;
+            font-family:'Poppins', sans-serif;
+            background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+            background-size: cover;
+            min-height:100vh;
+        }
+
+        h1{
+            text-align:center;
+            margin-top:40px;
+            color:white;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .container{
+            width:90%;
+            margin:auto;
+            margin-top:50px;
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            position: relative;
+            overflow: hidden;
+            border-radius:12px;
+            cursor:pointer;
+            box-shadow:0 5px 15px rgba(0,0,0,0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card img{
+            width:100%;
+            height:180px;
+            object-fit:cover;
+            transition: transform 0.3s;
+        }
+
+        .card:hover img{
+            transform: scale(1.1);
+        }
+
+        .card-content{
+            background:white;
+            padding:20px;
+            flex-grow:1;
+            text-align:center;
+        }
+
+        .card h3{
+            margin:10px 0;
+            color:#006666;
+        }
+
+        .card p{
+            font-size:14px;
+            color:#333;
+        }
+
+        .back{
+            display:block;
+            width:220px;
+            margin:40px auto;
+            text-align:center;
+            padding:12px;
+            background:white;
+            color:#006666;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .back:hover{
+            background:#00a6a6;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Our Insurance Partners</h1>
+
+<div class="container">
+
+    <a href="{% url 'insurance_detail' 'star_health' %}" class="card">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="Star Health">
+        <div class="card-content">
+            <h3>Star Health Insurance</h3>
+            <p>Cashless treatment available for most medical procedures and emergency services.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'insurance_detail' 'icici_lombard' %}" class="card">
+        <img src="https://images.unsplash.com/photo-1591129240820-0e0b218f0e5a" alt="ICICI Lombard">
+        <div class="card-content">
+            <h3>ICICI Lombard</h3>
+            <p>Supports hospitalization, surgery coverage, and outpatient treatments.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'insurance_detail' 'hdfc_ergo' %}" class="card">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3" alt="HDFC Ergo">
+        <div class="card-content">
+            <h3>HDFC Ergo</h3>
+            <p>Wide network coverage with fast claim approval for patients.</p>
+        </div>
+    </a>
+
+    <a href="{% url 'insurance_detail' 'bajaj_allianz' %}" class="card">
+        <img src="https://images.unsplash.com/photo-1591129240820-0e0b218f0e5a" alt="Bajaj Allianz">
+        <div class="card-content">
+            <h3>Bajaj Allianz</h3>
+            <p>Provides full medical insurance support including diagnostics and health checkups.</p>
+        </div>
+    </a>
+
+</div>
+
+<a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+
+</body>
+</html>

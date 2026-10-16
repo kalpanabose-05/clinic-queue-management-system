@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ insurance_type|title }} Details</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align:center; padding-top:80px; }
+        p { width:60%; margin:auto; font-size:16px; line-height:1.6; }
+        a button {
+            margin-top:30px;
+            padding:10px 20px;
+            border:none;
+            border-radius:6px;
+            background:#006666;
+            color:white;
+            cursor:pointer;
+        }
+        a button:hover { background:#00a6a6; }
+    </style>
+</head>
+<body>
+    <h1>{{ insurance_type|title }} Insurance Details</h1>
+    <p>{{ info }}</p>
+    <a href="{% url 'insurance' %}"><button>Back to Insurance Partners</button></a>
+</body>
+</html>

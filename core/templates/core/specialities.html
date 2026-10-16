@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Specialities - Life Care Clinic</title>
+
+    <style>
+
+        body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+
+    background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+
+    height:100vh;
+}
+        h1{
+            text-align:center;
+            margin-top:40px;
+            letter-spacing:1px;
+        }
+
+        .container{
+            width:85%;
+            margin:auto;
+            margin-top:50px;
+
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            color:#006666;
+            padding:25px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 0 15px #00000040;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        .card h3{
+            margin-bottom:10px;
+        }
+
+        .card p{
+            font-size:15px;
+        }
+
+        .back{
+            display:block;
+            width:220px;
+            margin:40px auto;
+            text-align:center;
+            padding:12px;
+            background:white;
+            color:#006666;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .back:hover{
+            background:#00a6a6;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>Our Medical Specialities</h1>
+
+<div class="container">
+
+    <div class="card">
+        <h3>Cardiology</h3>
+        <p>Heart-related diagnosis, ECG, and cardiac treatment services.</p>
+    </div>
+
+    <div class="card">
+        <h3>Orthopedics</h3>
+        <p>Treatment for bone, joint, and muscle-related problems.</p>
+    </div>
+
+    <div class="card">
+        <h3>Dermatology</h3>
+        <p>Skin care treatments including allergy and cosmetic procedures.</p>
+    </div>
+
+    <div class="card">
+        <h3>Neurology</h3>
+        <p>Brain and nervous system disorder diagnosis and treatment.</p>
+    </div>
+
+    <div class="card">
+        <h3>Pediatrics</h3>
+        <p>Special medical care for infants, children, and teenagers.</p>
+    </div>
+
+    <div class="card">
+        <h3>General Medicine</h3>
+        <p>Primary healthcare consultation for common illnesses.</p>
+    </div>
+
+</div>
+
+<a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Life Care Clinic</title>
+
+    <!-- Stylish Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* HERO SECTION */
+        .hero{
+            height:100vh;
+
+            /* Removed bluish overlay and kept original image color */
+            background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center center/cover;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center;
+            color:white;
+        }
+
+        .hero h1{
+            font-family:'Playfair Display', serif;
+            font-size:60px;
+            letter-spacing:2px;
+            margin-bottom:10px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .hero p{
+            font-size:20px;
+            font-style:italic;
+            margin-bottom:30px;
+            text-shadow:1px 1px 6px rgba(0,0,0,0.6);
+        }
+
+        /* BUTTON */
+        .btn{
+            padding:14px 32px;
+            background:#00a6a6;
+            border:none;
+            border-radius:8px;
+            color:white;
+            font-size:18px;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#007777;
+        }
+
+        /* FOOTER */
+        footer{
+            background:#007777;
+            color:white;
+            text-align:center;
+            padding:10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-box">
+
+        <h1>Life Care Clinic</h1>
+
+        <p>"Compassionate care for a healthier tomorrow"</p>
+
+        <!-- Dashboard Button -->
+        <a href="{% url 'dashboard' %}" class="btn">Care Flow Panel</a>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Life Care Clinic | Medical Appointment & Queue System
+</footer>
+
+</body>
+</html>

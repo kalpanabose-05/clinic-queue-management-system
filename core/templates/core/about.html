@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About - Life Care Clinic</title>
+
+    <style>
+
+        body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+
+    background: 
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+
+    height:100vh;
+}
+
+        .container{
+            width:75%;
+            margin:auto;
+            margin-top:80px;
+            background: rgba(0,0,0,0.55);
+            padding:40px;
+            border-radius:12px;
+            box-shadow:0 0 15px #00000060;
+        }
+
+        h1{
+            text-align:center;
+            margin-bottom:25px;
+        }
+
+        p{
+            font-size:18px;
+            line-height:1.7;
+            text-align:justify;
+        }
+
+        .section{
+            margin-top:30px;
+        }
+
+        .back{
+            display:block;
+            width:220px;
+            margin:40px auto;
+            text-align:center;
+            padding:12px;
+            background:white;
+            color:#006666;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .back:hover{
+            background:#00a6a6;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>About Life Care Clinic</h1>
+
+    <p>
+        Life Care Clinic is a modern healthcare center providing quality medical services with advanced technology 
+        and experienced doctors. Our clinic focuses on patient safety, quick diagnosis, and efficient treatment 
+        through a digital Medical Appointment and Queue Management System.
+    </p>
+
+    <div class="section">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to deliver compassionate healthcare services with high standards of medical excellence. 
+            We aim to reduce patient waiting time by using an online appointment and token-based queue system.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Our Vision</h2>
+        <p>
+            To become a trusted healthcare provider by combining technology and patient-centered care for faster 
+            and smarter hospital management.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Project Features</h2>
+        <p>
+            • Online Appointment Booking  
+            • Token-Based Queue System  
+            • Doctor and Department Management  
+            • Patient Information Storage using SQLite Database  
+            • Simple and User-Friendly Dashboard Interface
+        </p>
+    </div>
+
+</div>
+
+<a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Patient History</title>
+
+<style>
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#f4f6f9;
+    margin:0;
+    padding:20px;
+}
+
+/* Title */
+h2{
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* Table */
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Header */
+th{
+    background:#1f8a9b;
+    color:white;
+    padding:12px;
+    font-size:14px;
+}
+
+/* Rows */
+td{
+    padding:12px;
+    text-align:center;
+    border-bottom:1px solid #ddd;
+}
+
+/* Hover */
+tr:hover{
+    background:#f1f1f1;
+}
+
+/* STATUS COLORS */
+.status{
+    padding:5px 10px;
+    border-radius:10px;
+    color:white;
+    font-size:12px;
+}
+
+/* Different colors */
+.completed{ background:#28a745; }
+.waiting{ background:#f0ad4e; }
+.serving{ background:#007bff; }
+.cancelled{ background:#dc3545; }
+
+</style>
+</head>
+
+<body>
+
+<h2>Patient History</h2>
+
+<table>
+
+<tr>
+    <th>Patient Name</th>
+    <th>Gender</th>
+    <th>Phone</th>
+    <th>Doctor</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Token</th>
+    <th>Status</th>
+    <th>Reason</th>
+    <th>Booked On</th>
+</tr>
+
+{% for appt in appointments %}
+<tr>
+    <td>{{ appt.patient_name }}</td>
+    <td>{{ appt.gender }}</td>
+    <td>{{ appt.phone }}</td>
+    <td>{{ appt.doctor_name }}</td>
+    <td>{{ appt.appointment_date }}</td>
+    <td>{{ appt.appointment_time }}</td>
+    <td>{{ appt.token_number }}</td>
+
+    <!-- STATUS COLOR -->
+    <td>
+        <span class="status 
+            {% if appt.status == 'Completed' %}completed
+            {% elif appt.status == 'Waiting' %}waiting
+            {% elif appt.status == 'Now Serving' %}serving
+            {% elif appt.status == 'Cancelled' %}cancelled
+            {% endif %}
+        ">
+            {{ appt.status }}
+        </span>
+    </td>
+
+    <td>{{ appt.reason }}</td>
+    <td>{{ appt.created_at|date:"d M Y H:i" }}</td>
+</tr>
+
+{% empty %}
+<tr>
+    <td colspan="11">No patient history found</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

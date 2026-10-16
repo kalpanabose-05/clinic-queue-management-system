@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment</title>
+
+<style>
+body{
+    font-family:'Poppins', sans-serif;
+    background:url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+}
+
+.container{
+    width:40%;
+    margin:50px auto;
+    background:rgba(255,255,255,0.15);
+    padding:30px;
+    border-radius:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+.btn{
+    width:100%;
+    padding:12px;
+    background:#00a6a6;
+    color:white;
+    border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Book Appointment</h2>
+
+<form method="POST">
+{% csrf_token %}
+
+<input type="text" name="patient_name" placeholder="Name" required>
+
+<select name="gender" required>
+<option value="">Gender</option>
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+</select>
+
+<input type="text" name="phone" placeholder="Phone"
+       pattern="[0-9]{10}" maxlength="10" required>
+
+<!-- ✅ AUTO-FILL DOCTOR -->
+<label>Doctor Name</label>
+<input type="text" name="doctor" value="{{ doctor_name }}" readonly>
+
+<label>Speciality</label>
+<input type="text" name="speciality" value="{{ doctor_spec }}" readonly>
+
+<input type="date" name="appointment_date" required>
+
+<div style="display:flex; gap:10px;">
+
+<!-- Hour Input -->
+<input type="number" name="hour" placeholder="HH" min="1" max="12" required>
+
+<!-- Minute Input -->
+<input type="number" name="minute" placeholder="MM" min="0" max="59" required>
+
+<!-- AM/PM Select -->
+<select name="ampm" required>
+<option value="">AM/PM</option>
+<option value="AM">AM</option>
+<option value="PM">PM</option>
+</select>
+
+</div>
+
+<textarea name="reason" placeholder="Reason"></textarea>
+
+<button class="btn">Book Now</button>
+
+</form>
+
+</div>
+
+</body>
+</html>

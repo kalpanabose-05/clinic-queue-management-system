@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard - Life Care Clinic</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+
+        body{
+            margin:0;
+            font-family:'Poppins', sans-serif;
+
+            /* Same background as homepage with original colors */
+            background: url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center center/cover;
+            height:100vh;
+        }
+
+        /* LEFT TOP MENU (HORIZONTAL) */
+        .left-menu{
+            position:absolute;
+            top:30px;
+            left:30px;
+            display:flex;
+            gap:20px;
+        }
+
+        .left-menu a{
+            text-decoration:none;
+            background:white;
+            padding:12px 22px;
+            border-radius:10px;
+            color:#006666;
+            font-weight:bold;
+            box-shadow:0 0 10px #00000030;
+            transition:0.3s;
+        }
+
+        .left-menu a:hover{
+            background:#00a6a6;
+            color:white;
+        }
+
+        /* TOP RIGHT (if needed later) */
+        .top-right{
+            position:absolute;
+            top:30px;
+            right:30px;
+            display:flex;
+            gap:20px;
+        }
+
+        /* CENTER */
+        .center-box{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            text-align:center;
+        }
+
+        .title{
+            font-family:'Playfair Display', serif;
+            font-size:45px;
+            color:white;
+            margin-bottom:40px;
+            text-shadow:2px 2px 8px rgba(0,0,0,0.6);
+        }
+
+        .center-buttons{
+            display:flex;
+            gap:40px;
+            justify-content:center;
+        }
+
+        .center-buttons a{
+            text-decoration:none;
+            background:white;
+            color:#006666;
+            padding:20px 45px;
+            border-radius:12px;
+            font-size:20px;
+            font-weight:bold;
+            box-shadow:0 0 15px #00000040;
+            transition:0.3s;
+        }
+
+        .center-buttons a:hover{
+            background:#00a6a6;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- LEFT TOP HORIZONTAL MENU -->
+<div class="left-menu">
+    <a href="{% url 'services' %}">Services</a>
+    <a href="{% url 'insurance' %}">Insurance</a>
+    <a href="{% url 'specialities' %}">Specialities</a>
+    <a href="{% url 'about' %}">About</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</div>
+
+<!-- CENTER -->
+<div class="center-box">
+
+    <div class="title">Life Care Clinic Dashboard</div>
+
+    <div class="center-buttons">
+        <a href="{% url 'admin:index' %}">Admin</a>
+        <a href="{% url 'patient' %}">Patient</a>
+    </div>
+
+</div>
+
+</body>
+</html>

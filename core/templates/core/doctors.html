@@ -1,0 +1,172 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Our Doctors</title>
+
+<style>
+body{
+    font-family: 'Poppins', sans-serif;
+    background:#eef5f9;
+    margin:0;
+}
+
+/* ✅ 4 cards per row */
+.container{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:25px;
+    padding:40px;
+}
+
+/* Card design */
+.card{
+    background:white;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    overflow:hidden;
+    text-align:center;
+    transition:0.3s;
+}
+
+/* Hover effect */
+.card:hover{
+    transform:scale(1.03);
+}
+
+/* ✅ Image full & proper */
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+/* Content */
+.content{
+    padding:15px;
+}
+
+.content h3{
+    font-size:18px;
+    margin:10px 0;
+}
+
+.content p{
+    font-size:14px;
+    color:#555;
+}
+
+/* Button */
+.btn{
+    display:inline-block;
+    margin-top:10px;
+    padding:8px 15px;
+    background:#00a6a6;
+    color:white;
+    border-radius:8px;
+    text-decoration:none;
+    font-size:14px;
+}
+
+/* ✅ Responsive (important) */
+@media(max-width:1000px){
+    .container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<h2 style="text-align:center;">Our Doctors</h2>
+
+<div class="container">
+
+<div class="card">
+    <img src="{% static 'images/cardio.jpg' %}">
+    <div class="content">
+        <h3>Dr. Rajesh Kumar</h3>
+        <p>Cardiologist</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Rajesh%20Kumar&spec=Cardiologist" class="btn">Book Appointment</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="{% static 'images/ortho.jpg' %}">
+    <div class="content">
+        <h3>Dr. Arun Prakash</h3>
+        <p>Orthopedic</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Arun%20Prakash&spec=Orthopedic" class="btn">Book Appointment</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="{% static 'images/derma.jpg' %}">
+    <div class="content">
+        <h3>Dr. Shalu</h3>
+        <p>Dermatologist</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Shalu&spec=Dermatologist" class="btn">Book Appointment</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="{% static 'images/neuro.jpg' %}">
+    <div class="content">
+        <h3>Dr. Arjun Reddy</h3>
+        <p>Neurologist</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Arjun%20Reddy&spec=Neurologist" class="btn">Book Appointment</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="{% static 'images/pedia.jpg' %}">
+    <div class="content">
+        <h3>Dr. Priya</h3>
+        <p>Pediatrician</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Priya&spec=Pediatrician" class="btn">Book Appointment</a>
+    </div>
+</div>
+
+<div class="card">
+    <img src="{% static 'images/general.jpg' %}">
+    <div class="content">
+        <h3>Dr. Aakash</h3>
+        <p>General Physician</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Aakash&spec=General%20Physician" class="btn">Book Appointment</a>
+    </div>
+</div>
+<!-- Doctor 7 -->
+<div class="card">
+    <img src="{% static 'images/gyne.jpg' %}">
+    <div class="content">
+        <h3>Dr. Nisha</h3>
+        <p>Gynecologist</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Nisha&spec=Gynecologist" class="btn">
+            Book Appointment
+        </a>
+    </div>
+</div>
+
+<!-- Doctor 8 -->
+<div class="card">
+    <img src="{% static 'images/dentist.jpg' %}">
+    <div class="content">
+        <h3>Dr. Dhahini</h3>
+        <p>Dentist</p>
+        <a href="{% url 'appointment' %}?name=Dr.%20Dhahini&spec=Dentist" class="btn">
+            Book Appointment
+        </a>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>

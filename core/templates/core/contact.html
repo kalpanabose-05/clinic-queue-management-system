@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Life Care Clinic</title>
+
+    <style>
+
+       body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+
+    background: 
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+
+    height:100vh;
+}
+        .container{
+            width:40%;
+            margin:auto;
+            margin-top:80px;
+            background: rgb(204, 204, 204);
+            padding:40px;
+            border-radius:12px;
+        }
+
+        h1{
+            text-align:center;
+            color:#0f766e;
+            margin-bottom:20px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:none;
+            border-radius:8px;
+        }
+
+        textarea{
+            height:120px;
+        }
+
+        button{
+            width:100%;
+            padding:12px;
+            background:#00a6a6;
+            color:white;
+            border:none;
+            border-radius:8px;
+            font-size:16px;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:#007777;
+        }
+
+        .info{
+            margin-top:20px;
+            text-align:center;
+            line-height:1.8;
+        }
+
+        .back{
+            display:block;
+            text-align:center;
+            margin-top:20px;
+            color:rgb(29, 21, 21);
+            text-decoration:none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Contact Us</h1>
+
+    
+    <div class="info">
+        <p>📍 Life Care Clinic, Main Road, Chennai</p>
+        <p>📞 +91 7708360547</p>
+        <p>📧 lifecareclinic@gmail.com</p>
+    </div>
+
+    <a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+
+</div>
+
+</body>
+</html>

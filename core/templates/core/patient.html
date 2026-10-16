@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient Panel - Life Care Clinic</title>
+
+    <style>
+
+        body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+
+    background: 
+                url("https://images.unsplash.com/photo-1586773860418-d37222d8fce3") no-repeat center/cover;
+
+    height:100vh;
+}
+
+        h1{
+            text-align:center;
+            margin-top:40px;
+        }
+
+        .container{
+            width:75%;
+            margin:auto;
+            margin-top:70px;
+
+            display:grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+            gap:30px;
+        }
+
+        .card{
+            background:rgb(247, 248, 248);
+            color:#006666;
+            padding:30px;
+            border-radius:12px;
+            text-align:center;
+            box-shadow:0 0 15px #00000040;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:scale(1.05);
+        }
+
+        .card a{
+            text-decoration:none;
+            color:#006666;
+            font-size:18px;
+            font-weight:bold;
+        }
+
+        .card p{
+            margin-top:10px;
+            font-size:14px;
+        }
+
+        .back{
+            display:block;
+            width:220px;
+            margin:40px auto;
+            text-align:center;
+            padding:12px;
+            background:rgb(244, 247, 246);
+            color:#006666;
+            border-radius:8px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .back:hover{
+            background:#00a6a6;
+            color:white;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<h1>Patient Dashboard - Life Care Clinic</h1>
+
+<div class="container">
+
+    <!-- Book Appointment -->
+    <div class="card">
+        <a href="{% url 'doctors' %}">Book Appointment</a>
+        <p>Fill patient details and get token number.</p>
+    </div>
+
+    <!-- View Queue -->
+    <div class="card">
+        <a href="{% url 'queue' %}">View Queue Status</a>
+        <p>Check your token and waiting list.</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+        <a href="{% url 'contact' %}">Contact Clinic</a>
+        <p>Send message or enquiry to hospital.</p>
+    </div>
+
+</div>
+
+<a href="{% url 'dashboard' %}" class="back">Back to Dashboard</a>
+
+</body>
+</html>
